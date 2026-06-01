@@ -94,23 +94,22 @@ body::after {
   color: #f2f2f2;
 }
 
-@keyframes meta-pulse {
-  0%, 100% { opacity: 0.5; }
-  50% { opacity: 1; }
-}
-
-@keyframes meta-dot-pulse {
-  0%, 100% { opacity: 0.3; transform: scale(1); }
-  50% { opacity: 1; transform: scale(1.4); }
-}
-
-.meta-pulse {
-  animation: meta-pulse 3s ease-in-out infinite;
+@keyframes dot-glow {
+  0%, 100% {
+    opacity: 0.4;
+    transform: scale(1);
+    filter: blur(0px);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.6);
+    filter: blur(1px);
+  }
 }
 
 .meta-dot-pulse {
   background: #5e6ad2;
-  animation: meta-dot-pulse 3s ease-in-out infinite;
+  animation: dot-glow 2.8s ease-in-out infinite;
 }
 
 @media (prefers-reduced-motion: reduce) {

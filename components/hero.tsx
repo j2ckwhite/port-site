@@ -106,11 +106,8 @@ export function Hero() {
           {["Chicago, IL", "Founder, RoleMade", "19 years old"].map((label, i) => (
             <span
               key={label}
-              className="flex items-center gap-2 text-sm meta-pulse"
-              style={{
-                color: "#8a8a8a",
-                animationDelay: `${i * 0.6}s`,
-              }}
+              className="flex items-center gap-2 text-sm"
+              style={{ color: "#8a8a8a" }}
             >
               <span
                 className="w-1.5 h-1.5 rounded-full meta-dot-pulse"
