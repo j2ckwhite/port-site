@@ -103,13 +103,19 @@ export function Hero() {
           {...(!prefersReduced && { initial: { opacity: 0, y: 20 }, animate: { opacity: 1, y: 0 }, transition: { duration: 0.55, delay: 0.3 } })}
           className="flex flex-wrap items-center gap-4 md:gap-6 mb-10 md:mb-12"
         >
-          {["Chicago, IL", "Founder, RoleMade", "19 years old"].map((label) => (
+          {["Chicago, IL", "Founder, RoleMade", "19 years old"].map((label, i) => (
             <span
               key={label}
-              className="flex items-center gap-2 text-sm"
-              style={{ color: "#8a8a8a" }}
+              className="flex items-center gap-2 text-sm meta-pulse"
+              style={{
+                color: "#8a8a8a",
+                animationDelay: `${i * 0.6}s`,
+              }}
             >
-              <span className="w-1 h-1 rounded-full" style={{ background: "#2e2e35" }} />
+              <span
+                className="w-1.5 h-1.5 rounded-full meta-dot-pulse"
+                style={{ animationDelay: `${i * 0.6}s` }}
+              />
               {label}
             </span>
           ))}
