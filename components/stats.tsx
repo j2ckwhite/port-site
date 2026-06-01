@@ -67,7 +67,7 @@ export function Stats() {
       style={{ borderTop: "1px solid #2e2e35", borderBottom: "1px solid #2e2e35" }}
     >
       <div className="max-w-6xl mx-auto">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-px" style={{ background: "#2e2e35" }}>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px" style={{ background: "#2e2e35" }}>
           {stats.map((stat, i) => (
             <div
               key={i}
